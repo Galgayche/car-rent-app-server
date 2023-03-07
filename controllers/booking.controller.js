@@ -16,23 +16,6 @@ module.exports.bookingController = {
       totalDays,
     } = req.body;
 
-    const isExist = await Booking.find({ _carId });
-
-    if (isExist.length > 0) {
-      const range1Start = moment(fromDate, 'DD-MM-YYYY');
-      const range1End = moment(toDate, 'DD-MM-YYYY');
-
-      for (let booking of isExist) {
-        const range2Start = moment(booking.fromDate, 'DD-MM-YYYY');
-        const range2End = moment(booking.toDate, 'DD-MM-YYYY');
-
-        if (range1Start.isSameOrBefore(range2End) && range1End.isSameOrAfter(range2Start)) {
-          return res
-            .status(400)
-            .json({ error: `Данное авто уже занято с ${booking.fromDate} до ${booking.toDate}` });
-        }
-      }
-    }
     try {
       const booking = await Booking.create({
         _carId,
@@ -90,5 +73,26 @@ module.exports.bookingController = {
     } catch (error) {
       return res.json(error);
     }
+  },
+
+  checkReserved: async (req, res, next) => {
+    const { fromDate, toDate, _carId } = req.body;
+
+    const isExist = await Booking.find({ _carId });
+
+    if (isExist.length > 0) {
+      const range1Start = moment(fromDate, 'DD-MM-YYYY');
+      const range1End = moment(toDate, 'DD-MM-YYYY');
+
+      for (let booking of isExist) {
+        const range2Start = moment(booking.fromDate, 'DD-MM-YYYY');
+        const range2End = moment(booking.toDate, 'DD-MM-YYYY');
+
+        if (range1Start.isSameOrBefore(range2End) && range1End.isSameOrAfter(range2Start)) {
+          return res.json(`Данное авто уже занято с ${booking.fromDate} до ${booking.toDate}`);
+        }
+      }
+    }
+    res.send(null);
   },
 };
