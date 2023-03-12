@@ -33,6 +33,8 @@ module.exports.MessagesController = {
         }
       })
       res.json(projectMessages)
-    } catch (error) {}
+    } catch (error) {
+      next(error)
+    }
   },
 }

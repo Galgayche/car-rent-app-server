@@ -53,17 +53,23 @@ module.exports.UserController = {
       delete user.password
 
       return res.json({ status: true, user })
-    } catch (error) {}
+    } catch (error) {
+      next(error)
+    }
   },
 
   setAvatar: async (req, res, next) => {
     try {
       const userId = req.params.id
       const avatarImage = req.body.image
-      const userData = await User.findByIdAndUpdate(userId, {
-        isAvatarImageSet: true,
-        avatarImage,
-      }, {new: true})
+      const userData = await User.findByIdAndUpdate(
+        userId,
+        {
+          isAvatarImageSet: true,
+          avatarImage,
+        },
+        { new: true }
+      )
       return res.json({
         isSet: userData.isAvatarImageSet,
         image: userData.avatarImage,
