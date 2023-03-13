@@ -68,19 +68,19 @@
 
 ### В данном проекте установлены следующие библиотеки и зависимости:
 
-- "bcrypt": "^5.1.0",
-- "buffer": "^6.0.3",
-- "cors": "^2.8.5",
-- "dotenv": "^16.0.3",
-- "express": "^4.18.2",
-- "express-validator": "^6.14.3",
-- "jsonwebtoken": "^9.0.0",
-- "moment": "^2.29.4",
-- "mongoose": "^6.9.0",
-- "morgan": "^1.10.0",
-- "multer": "^1.4.5-lts.1",
-- "nodemon": "^2.0.20",
-- "socket.io": "^4.6.1"
+- bcrypt
+- buffer
+- cors
+- dotenv
+- express
+- express-validator
+- jsonwebtoken
+- moment
+- mongoose
+- morgan
+- multer
+- nodemon
+- socket.io
 
 ### Для выполнения поставленных задач я использовал следующие библиотеки:
 
