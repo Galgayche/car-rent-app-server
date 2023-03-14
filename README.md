@@ -20,6 +20,15 @@
   </a>
 </h3>
 
+<h4>
+Backend
+<br>
+<br>
+<a href="https://github.com/AnZoro1/car-rent-app-server">
+Frontend 
+</a>
+</h4>
+
 ### Функционал сервера веб-приложения
 
 - CRUD операции с документами
@@ -27,7 +36,7 @@
 - Бронирование
 - Сокеты
 
-Анимация проекта в репозитории <a href="https://github.com/AnZoro1/car-rent-app-client"> https://github.com/AnZoro1/car-rent-app-client</a>
+Для просмотра демонстрации проекта в формате gif перейдите в <a href="https://github.com/AnZoro1/car-rent-app-client"> Frontend</a>
 
 ## Технологии проекта
 
