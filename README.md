@@ -9,13 +9,11 @@
 </h3>
 
 <h3>
-  <a href="https://github.com/SoNomad">
    Nurmuhammad Tasuev 
   </a>
 </h3>
 
 <h3>
-  <a href="https://github.com/raininsnovv">
    Ibragim Bakaev
   </a>
 </h3>
