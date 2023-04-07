@@ -24,7 +24,7 @@
 Backend
 <br>
 <br>
-<a href="https://github.com/AnZoro1/car-rent-app-server">
+<a href="https://github.com/AnZoro1/car-rent-app-client">
 Frontend 
 </a>
 </h4>
